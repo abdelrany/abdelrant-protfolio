@@ -2,20 +2,17 @@
 import Image from "next/image";
 import { hero } from "../data/config";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 export default function Hero() {
   const { theme, setTheme } = useTheme();
 
   const handleDownloadResume = () => {
-    const { resumeLink } = hero;
-    // Create a link element and set its properties
     const link = document.createElement("a");
-    link.href = resumeLink;
+    link.href = hero.resumeLink;
     link.target = "_blank";
     link.download = "Resume.pdf";
-
-    // Dispatch a click event on the link to trigger the download
-    link.dispatchEvent(new MouseEvent("click"));
+    link.click();
   };
 
   return (

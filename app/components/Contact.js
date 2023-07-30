@@ -33,20 +33,20 @@ export default function Contact() {
             />
           </a>
         )}
-        {/* {contact.dribbble && (
+        {contact.instagram && (
           <a
-            href={`https://dribbble.com/${contact.dribbble}`}
+            href={`https://instagram.com/${contact.instagram}`}
             target="_blank"
             rel="noreferrer"
           >
             <Image
-              src="/static/icons/dribbble.svg"
+              src="/static/icons/instagram.svg"
               width={20}
               height={20}
-              alt="Dribbble icon"
+              alt="Instagram icon"
             />
           </a>
-        )} */}
+        )}
         {contact.linkedin && (
           <a
             href={`https://linkedin.com/in/${contact.linkedin}`}
