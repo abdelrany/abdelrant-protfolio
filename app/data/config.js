@@ -65,5 +65,5 @@ export const contact = {
   github: "abdelrany",
   linkedin: "abdelrany",
   dribbble: "abdelrany",
-  instagram: "abdelrany",
+  instagram: "abdel_rany",
 };
