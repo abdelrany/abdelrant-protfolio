@@ -63,7 +63,9 @@ export const contact = {
   title: "Contact Me",
   email: "abdelghani.salama@outlook.com",
   github: "abdelrany",
-  linkedin: "abdelrany",
-  dribbble: "abdelrany",
-  instagram: "abdel_rany",
+  linkedin: "in/abdelrany",
+  socialMediaPlatforms: [
+    { platform: "github", icon: "github.svg", label: "Github" },
+    { platform: "linkedin", icon: "linkedin.svg", label: "LinkedIn" },
+  ],
 };

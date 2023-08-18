@@ -19,48 +19,28 @@ export default function Contact() {
         </a>
       </p>
       <div className="flex space-x-5 mt-5 text-lightText transition-colors duration-500">
-        {contact.github && (
-          <a
-            href={`https://github.com/${contact.github}`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              src="/static/icons/github.svg"
-              width={20}
-              height={20}
-              alt="Github icon"
-            />
-          </a>
-        )}
-        {contact.instagram && (
-          <a
-            href={`https://instagram.com/${contact.instagram}`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              src="/static/icons/instagram.svg"
-              width={20}
-              height={20}
-              alt="Instagram icon"
-            />
-          </a>
-        )}
-        {contact.linkedin && (
-          <a
-            href={`https://linkedin.com/in/${contact.linkedin}`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              src="/static/icons/linkedin.svg"
-              width={20}
-              height={20}
-              alt="LinkedIn icon"
-            />
-          </a>
-        )}
+        {contact.socialMediaPlatforms.map((platform) => {
+          const platformInfo = contact[platform.platform];
+          if (platformInfo) {
+            return (
+              <a
+                key={platform.platform}
+                href={`https://${platform.platform}.com/${platformInfo}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  className="dark:text-white text-black transition-colors duration-500 "
+                  src={`/static/icons/${platform.icon}`}
+                  width={20}
+                  height={20}
+                  alt={`${platform.label} icon`}
+                />
+              </a>
+            );
+          }
+          return null;
+        })}
       </div>
     </div>
   );

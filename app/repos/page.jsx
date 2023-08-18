@@ -16,7 +16,6 @@ async function fetchRepos() {
 }
 
 const RepoCard = ({ repo }) => {
-  console.log("hhh", repo.languages);
   return (
     <div className="p-6 border border-lightText hover:bg-white rounded-md mb-4">
       <h3 className="text-base text-lightText mb-1">{repo.name}</h3>
